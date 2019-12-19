@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-avatar slot="start">
+        <img class="imgTitle" src="../../assets/img/footwearbg.png" alt="Logo">
+    </ion-avatar>
+    <ion-title class="logoName">
+      FOOTWEARS
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-item>
+    <ion-input [(ngModel)]="searchValue" placeholder="Search For #shoes OR #sandals and press Enter" (change)="search()"> <ion-icon name="search"></ion-icon></ion-input>
+    <ion-button id="searchresult" *ngFor="let value of values;let i = index" (click)="remove(value,i)">{{value}} <ion-icon name="close-circle"></ion-icon></ion-button>      
+   </ion-item>
+
+  <ion-card color="light" style="opacity: 0.9;">
+    <p>Your Search Results:</p>   
+    <ion-card-header *ngFor="let res of footware">
+      <ion-card-title>{{res[1]}}</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+</ion-content>
