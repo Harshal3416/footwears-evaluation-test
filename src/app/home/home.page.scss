@@ -2,10 +2,12 @@ ion-content{
     --background: url("../../assets/img/footwear3.png") 0 0/100% 100% no-repeat;   
 }
 
-.imgTitle{
+
+.avatar{
     padding: 8px;
     margin-left: 10%;
-}
+    background: url("../../assets/img/footwearbg.png") 0 0/100% 100% no-repeat;
+ }
 
 .logoName{
     font-family: cursive;
