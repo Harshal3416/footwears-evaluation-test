@@ -16,9 +16,11 @@
     <ion-button id="searchresult" *ngFor="let value of values;let i = index" (click)="remove(value,i)">{{value}} <ion-icon name="close-circle"></ion-icon></ion-button>      
    </ion-item>
 
-  <ion-card color="light" style="opacity: 0.9;">
-    <p>Your Search Results:</p>   
+  <ion-card color="light" style="opacity: 0.9;" *ngIf="values">
+     
     <ion-card-header *ngFor="let res of footware">
+      
+    <ion-card-subtitle style="color:blue;">Results for {{res[0]}}: </ion-card-subtitle>
       <ion-card-title *ngFor="let val of res[1]">{{val}}</ion-card-title>
     </ion-card-header>
   </ion-card>
