@@ -20,7 +20,7 @@
      
     <ion-card-header *ngFor="let res of footware">
       
-    <ion-card-subtitle style="color:blue;">Results for {{res[0]}}: </ion-card-subtitle>
+    <ion-card-subtitle style="color:blue;" *ngIf="res[0]">Results for {{res[0]}}: </ion-card-subtitle>
       <ion-card-title *ngFor="let val of res[1]">{{val}}</ion-card-title>
     </ion-card-header>
   </ion-card>
