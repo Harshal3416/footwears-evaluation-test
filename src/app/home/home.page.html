@@ -19,7 +19,7 @@
   <ion-card color="light" style="opacity: 0.9;">
     <p>Your Search Results:</p>   
     <ion-card-header *ngFor="let res of footware">
-      <ion-card-title>{{res[1]}}</ion-card-title>
+      <ion-card-title *ngFor="let val of res[1]">{{val}}</ion-card-title>
     </ion-card-header>
   </ion-card>
 

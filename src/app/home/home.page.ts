@@ -33,8 +33,6 @@ export class HomePage {
         this.footware = [...this.footware , Object.entries(res).filter(el => el[0] === this.searchValue)[0]];
         this.values.push(this.searchValue);       
         this.searchValue = '';
-
-        console.log("this.footware", this.footware)
       });      
     }
   }
